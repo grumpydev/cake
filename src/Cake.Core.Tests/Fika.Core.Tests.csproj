@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>Cake.Common.Tests</AssemblyName>
+    <AssemblyName>Cake.Core.Tests</AssemblyName>
     <TargetFrameworks>net46;netcoreapp1.0</TargetFrameworks>
-    <PlatformTarget>anycpu</PlatformTarget>
+    <PlatformTarget>AnyCpu</PlatformTarget>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <IsCakeTestProject>true</IsCakeTestProject>
   </PropertyGroup>
@@ -13,10 +13,9 @@
 
   <!-- Project references -->
   <ItemGroup>
-    <ProjectReference Include="..\Cake.Core\Cake.Core.csproj" />
-    <ProjectReference Include="..\Cake.Common\Cake.Common.csproj" />
-    <ProjectReference Include="..\Cake.Testing\Cake.Testing.csproj" />
-    <ProjectReference Include="..\Cake.Testing.Xunit\Cake.Testing.Xunit.csproj" />
+    <ProjectReference Include="..\Cake.Core\Fika.Core.csproj" />
+    <ProjectReference Include="..\Cake.Testing.Xunit\Fika.Testing.Xunit.csproj" />
+    <ProjectReference Include="..\Cake.Testing\Fika.Testing.csproj" />
   </ItemGroup>
 
   <!-- Global packages -->
@@ -31,35 +30,13 @@
   <!-- .NET Framework packages -->
   <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
     <Reference Include="System" />
-    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Threading.Tasks" />
-    <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Update=".\Properties\PropertyList-1.0.dtd">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <EmbeddedResource Include="Unit\Scripting\CodeGen\Expected\Methods\*;Unit\Scripting\CodeGen\Expected\Properties\*" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Properties\Resources2.resx">
-      <Generator></Generator>
-    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

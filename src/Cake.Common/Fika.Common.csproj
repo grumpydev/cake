@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>Cake.Common</AssemblyName>
+    <AssemblyName>Fika.Common</AssemblyName>
     <TargetFrameworks>net46;netstandard1.6</TargetFrameworks>
     <OutputType>Library</OutputType>
     <PlatformTarget>AnyCpu</PlatformTarget>
@@ -17,9 +17,6 @@
   <Import Project="..\Shared.msbuild" />
 
   <!-- Project references -->
-  <ItemGroup>
-    <ProjectReference Include="..\Cake.Core\Cake.Core.csproj" />
-  </ItemGroup>
 
   <!-- .NET Core packages -->
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
@@ -41,6 +38,9 @@
     <Reference Include="System.Runtime.Serialization.Json" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cake.Core\Fika.Core.csproj" />
   </ItemGroup>
 
 </Project>

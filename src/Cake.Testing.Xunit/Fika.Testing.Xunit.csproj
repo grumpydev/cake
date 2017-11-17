@@ -1,33 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>Cake.Testing</AssemblyName>
+    <AssemblyName>Cake.Testing.Xunit</AssemblyName>
     <TargetFrameworks>net46;netstandard1.6</TargetFrameworks>
     <OutputType>Library</OutputType>
     <PlatformTarget>AnyCpu</PlatformTarget>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-  </PropertyGroup>
-
-  <!-- Package specific metadata -->
-  <PropertyGroup>
-    <Description>Contains testing utilities for Cake.</Description>
   </PropertyGroup>
 
   <!-- Import shared functionality -->
   <Import Project="..\Shared.msbuild" />
 
-  <!-- Project references -->
+  <!-- Global packages -->
   <ItemGroup>
-    <ProjectReference Include="..\Cake.Core\Cake.Core.csproj" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />
+    <PackageReference Include="xunit" Version="2.3.0-beta5-build3769" />
   </ItemGroup>
+
+  <!-- Project references -->
 
   <!-- .NET Framework packages -->
   <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
     <Reference Include="System" />
     <Reference Include="System.Runtime" />
-    <Reference Include="System.Threading.Tasks" />
-    <Reference Include="System.Web" />
     <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cake.Core\Fika.Core.csproj" />
   </ItemGroup>
 
 </Project>

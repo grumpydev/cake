@@ -3,17 +3,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cake.portable</id>
-    <title>Cake.Portable</title>
+    <title>Fika.Portable</title>
     <version>0.0.0</version>
     <authors>Patrik Svensson, Mattias Karlsson, Gary Ewan Park, Alistair Chapman, Martin Björkström and contributors</authors>
-    <summary>Cake (C# Make) is a build automation system with a C# DSL to do things like compiling code, copy files/folders, running unit tests, compress files and build NuGet packages.</summary>
-    <description>The Cake script runner.</description>
+    <summary>Fika (C# Make) is a build automation system with a C# DSL to do things like compiling code, copy files/folders, running unit tests, compress files and build NuGet packages.</summary>
+    <description>The Fika script runner.</description>
     <projectUrl>https://cakebuild.net/</projectUrl>
     <packageSourceUrl>https://github.com/cake-build/cake</packageSourceUrl>
     <projectSourceUrl>https://github.com/cake-build/cake</projectSourceUrl>
     <docsUrl>https://cakebuild.net/docs</docsUrl>
     <bugTrackerUrl>https://github.com/cake-build/cake/issues</bugTrackerUrl>
-    <tags>Cake Script Build</tags>
+    <tags>Fika Script Build</tags>
     <copyright>Copyright (c) .NET Foundation and contributors</copyright>
     <licenseUrl>https://github.com/cake-build/cake/blob/develop/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
